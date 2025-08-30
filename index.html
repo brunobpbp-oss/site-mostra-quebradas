@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostra de Cinema Arte das Quebradas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            /* Alterado: Fundo para um bege/papiro e texto para um cinza-chumbo quente */
+            background-color: #F4F1EA;
+            color: #4a443b;
+            font-family: 'Inter', sans-serif;
+        }
+        .font-title {
+            font-family: 'Staatliches', cursive;
+        }
+        .text-yellow-quebrada {
+            color: #F2E600;
+        }
+        .bg-yellow-quebrada {
+            background-color: #F2E600;
+        }
+        .border-yellow-quebrada {
+            border-color: #F2E600;
+        }
+        .outline-yellow-quebrada {
+            outline-color: #F2E600;
+        }
+        .hero-bg {
+            /* Alterado: Gradiente com a nova cor de fundo */
+            background-image: linear-gradient(rgba(244, 241, 234, 0.2), rgba(244, 241, 234, 1)), url('https://images.unsplash.com/photo-1543185949-a39490a68393?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+            background-size: cover;
+            background-position: center;
+        }
+        .noise::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 800 800' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: -1; /* Ajustado para não cobrir conteúdo */
+        }
+    </style>
+</head>
+<body class="relative noise">
+    <!-- HEADER -->
+    <!-- Alterado: Fundo claro com blur para a nova cor -->
+    <header id="header" class="bg-[#F4F1EA]/80 backdrop-blur-sm sticky top-0 z-50 transition-all duration-300 border-b border-gray-200/50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-title text-yellow-quebrada tracking-wider" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">
+                Arte das Quebradas
+            </a>
+            <!-- Alterado: Cor do texto dos links do menu para herdar do body -->
+            <nav class="hidden md:flex items-center space-x-6">
+                <a href="#a-mostra" class="hover:text-yellow-quebrada transition-colors duration-300">A Mostra</a>
+                <a href="#filmes" class="hover:text-yellow-quebrada transition-colors duration-300">Filmes</a>
+                <a href="#programacao" class="hover:text-yellow-quebrada transition-colors duration-300">Programação</a>
+                <a href="#textos" class="hover:text-yellow-quebrada transition-colors duration-300">Textos Críticos</a>
+                <a href="#contato" class="hover:text-yellow-quebrada transition-colors duration-300">Contato</a>
+            </nav>
+            <!-- Alterado: Cor do ícone do menu para herdar do body -->
+            <button id="mobile-menu-button" class="md:hidden">
+                <i data-lucide="menu" class="h-6 w-6"></i>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <!-- Alterado: Fundo e texto do menu mobile para a nova cor -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#F4F1EA]/95 backdrop-blur-sm">
+            <a href="#a-mostra" class="block text-center py-3 hover:bg-yellow-quebrada hover:text-black transition-colors duration-300">A Mostra</a>
+            <a href="#filmes" class="block text-center py-3 hover:bg-yellow-quebrada hover:text-black transition-colors duration-300">Filmes</a>
+            <a href="#programacao" class="block text-center py-3 hover:bg-yellow-quebrada hover:text-black transition-colors duration-300">Programação</a>
+            <a href="#textos" class="block text-center py-3 hover:bg-yellow-quebrada hover:text-black transition-colors duration-300">Textos Críticos</a>
+            <a href="#contato" class="block text-center py-3 hover:bg-yellow-quebrada hover:text-black transition-colors duration-300">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section id="inicio" class="hero-bg min-h-screen flex items-center justify-center text-center">
+            <div class="container mx-auto px-4 z-10">
+                <h1 class="text-6xl md:text-8xl lg:text-9xl font-title text-yellow-quebrada tracking-widest leading-none" style="text-shadow: 2px 2px 4px rgba(0,0,0,0.5);">
+                    Mostra de Cinema
+                </h1>
+                 <!-- Alterado: Cor do texto para herdar a cor principal (cinza-quente) -->
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-title tracking-wider mb-6">
+                    Arte das Quebradas
+                </h2>
+                <!-- Alterado: Cor do texto para um cinza secundário -->
+                <p class="text-lg md:text-xl max-w-2xl mx-auto mb-8 text-gray-700">
+                    O cinema que pulsa nas bordas. Uma celebração das narrativas que emergem das periferias e redefinem o nosso olhar.
+                </p>
+                <p class="font-bold text-yellow-quebrada text-xl md:text-2xl mb-8" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.4);">25 a 30 de Agosto de 2025</p>
+                <!-- Alterado: Efeito hover do botão -->
+                <a href="#programacao" class="bg-yellow-quebrada text-black font-bold py-3 px-8 rounded-lg text-lg hover:bg-gray-900 hover:text-white transition-all duration-300 transform hover:scale-105">
+                    Veja a Programação
+                </a>
+            </div>
+        </section>
+
+        <!-- A MOSTRA SECTION -->
+        <!-- Alterado: Fundo para branco para criar contraste de seção -->
+        <section id="a-mostra" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-title text-yellow-quebrada mb-6" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">A Mostra</h2>
+                <!-- Alterado: Cor do texto para escuro -->
+                <div class="max-w-3xl mx-auto text-left text-gray-700 leading-relaxed space-y-4">
+                    <p>A Mostra Arte das Quebradas nasce do desejo de criar uma janela para o cinema que é feito na, pela e sobre a periferia. Longe dos grandes centros e dos holofotes tradicionais, existe uma produção audiovisual potente, visceral e necessária que conta as nossas histórias com a nossa própria voz.</p>
+                    <p>Acreditamos no cinema como ferramenta de transformação social, espelho de identidades e arma de afirmação cultural. Este festival é um ponto de encontro, um aquilombamento de ideias e imagens, onde realizadores, público e crítica se reúnem para celebrar a força criativa das quebradas do Brasil.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FILMES SECTION -->
+        <section id="filmes" class="py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-title text-yellow-quebrada mb-12 text-center" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Filmes em Destaque</h2>
+                <div id="filmes-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    <!-- Filmes serão inseridos aqui pelo JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- PROGRAMAÇÃO SECTION -->
+        <!-- Alterado: Fundo para branco para criar contraste de seção -->
+        <section id="programacao" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-title text-yellow-quebrada mb-12 text-center" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Programação</h2>
+                <div id="programacao-container" class="max-w-4xl mx-auto">
+                    <!-- Programação será inserida aqui pelo JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- TEXTOS CRÍTICOS SECTION -->
+        <section id="textos" class="py-20 md:py-32">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-title text-yellow-quebrada mb-12 text-center" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Textos Críticos</h2>
+                <div id="textos-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Textos serão inseridos aqui pelo JS -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- CONTATO / SOCIAL SECTION -->
+        <!-- Alterado: Fundo para branco para criar contraste de seção -->
+        <section id="contato" class="py-20 md:py-32 bg-white">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-title text-yellow-quebrada mb-6" style="text-shadow: 1px 1px 2px rgba(0,0,0,0.2);">Siga a Mostra</h2>
+                 <!-- Alterado: Cor do texto para escuro -->
+                <p class="text-lg text-gray-700 mb-8 max-w-xl mx-auto">
+                    Acompanhe todas as novidades, bastidores e cobertura em tempo real em nossas redes sociais.
+                </p>
+                 <!-- Alterado: Cor dos ícones para escuro -->
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/mostraartedasquebradas/" target="_blank" class="text-gray-700 hover:text-yellow-quebrada transition-colors duration-300">
+                        <i data-lucide="instagram" class="h-10 w-10"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-yellow-quebrada transition-colors duration-300">
+                        <i data-lucide="youtube" class="h-10 w-10"></i>
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-yellow-quebrada transition-colors duration-300">
+                        <i data-lucide="twitter" class="h-10 w-10"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+     <!-- Alterado: Fundo do rodapé para sutilmente diferente -->
+    <footer class="bg-gray-100 py-8 border-t border-gray-200">
+        <div class="container mx-auto px-4 text-center text-gray-600">
+            <p>&copy; 2025 Mostra de Cinema Arte das Quebradas. Todos os direitos reservados.</p>
+            <p class="text-sm mt-2">Desenvolvido com a potência das ruas.</p>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // --- DADOS MOCKADOS (simulando uma API) ---
+        // Nenhuma alteração nos dados
+
+        const filmes = [
+            {
+                poster: 'https://placehold.co/400x600/F2E600/101010?text=Corpo\\nTerritório',
+                titulo: 'Corpo Território',
+                diretor: 'Aline Baiana',
+                tipo: 'Documentário | 75 min'
+            },
+            {
+                poster: 'https://placehold.co/400x600/101010/F2E600?text=Rua\\ndo\\nEco',
+                titulo: 'Rua do Eco',
+                diretor: 'Jota Ramos',
+                tipo: 'Ficção | 18 min'
+            },
+            {
+                poster: 'https://placehold.co/400x600/D90404/FFFFFF?text=As\\nSementes',
+                titulo: 'As Sementes de Ibi',
+                diretor: 'Mari Griô',
+                tipo: 'Animação | 12 min'
+            },
+            {
+                poster: 'https://placehold.co/400x600/0431B8/FFFFFF?text=Concreto\\nArmado',
+                titulo: 'Concreto Armado',
+                diretor: 'Coletivo Laje',
+                tipo: 'Experimental | 25 min'
+            }
+        ];
+
+        const programacao = {
+            'Dia 1 (25/08)': [
+                { hora: '18:00', evento: 'Abertura Oficial', local: 'Cinema Principal' },
+                { hora: '19:00', evento: 'Mostra Competitiva 1: "Corpo Território"', local: 'Cinema Principal' },
+                { hora: '21:00', evento: 'Debate com a diretora Aline Baiana', local: 'Sala Debate' }
+            ],
+            'Dia 2 (26/08)': [
+                { hora: '17:00', evento: 'Sessão Curtas 1: "Rua do Eco" + "As Sementes de Ibi"', local: 'Cinema Principal' },
+                { hora: '19:00', evento: 'Oficina: Roteiro de Guerrilha', local: 'Sala Oficina' },
+                { hora: '21:00', evento: 'Mostra Competitiva 2: "Concreto Armado"', local: 'Cinema Principal' }
+            ],
+            'Dia 3 (27/08)': [
+                 { hora: '18:00', evento: 'Sessão Especial: Clássicos da Quebrada', local: 'Cinema Principal' },
+                { hora: '20:00', evento: 'Mesa: "O futuro do cinema periférico"', local: 'Sala Debate' },
+            ]
+        };
+
+        const textosCriticos = [
+            {
+                imagem: 'https://placehold.co/600x400/101010/FFFFFF?text=Análise',
+                titulo: 'O Corpo como Fronteira em "Corpo Território"',
+                autor: 'Por Julia Alves',
+                resumo: 'Uma análise aprofundada sobre como o documentário de Aline Baiana utiliza a geografia do corpo para discutir questões de pertencimento e resistência.'
+            },
+            {
+                imagem: 'https://placehold.co/600x400/F2E600/101010?text=Crítica',
+                titulo: 'A Poética do Asfalto em "Rua do Eco"',
+                autor: 'Por Marcos Lins',
+                resumo: 'Jota Ramos constrói uma narrativa ficcional que flerta com o realismo mágico das grandes cidades, transformando a rua em personagem principal.'
+            },
+            {
+                imagem: 'https://placehold.co/600x400/D90404/FFFFFF?text=Ensaio',
+                titulo: 'Afrofuturismo e Ancestralidade em "As Sementes de Ibi"',
+                autor: 'Por Tainá Costa',
+                resumo: 'O curta de animação de Mari Griô é um marco ao conectar tecnologias futuras com saberes ancestrais, criando um universo único e poderoso.'
+            }
+        ];
+
+        // --- LÓGICA DE RENDERIZAÇÃO ---
+
+        function renderFilmes() {
+            const grid = document.getElementById('filmes-grid');
+            grid.innerHTML = filmes.map(filme => `
+                <div class="group relative overflow-hidden rounded-lg cursor-pointer shadow-lg">
+                    <img src="${filme.poster}" alt="Pôster do filme ${filme.titulo}" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    <!-- Alterado: Gradiente escuro para garantir legibilidade do texto claro sobre a imagem -->
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+                    <!-- Alterado: Cor do texto para branco, pois está sobre o gradiente escuro -->
+                    <div class="absolute bottom-0 left-0 p-4 transform translate-y-1/2 group-hover:translate-y-0 transition-transform duration-500 w-full">
+                        <h3 class="text-xl font-bold text-white">${filme.titulo}</h3>
+                        <p class="text-sm text-yellow-quebrada">${filme.diretor}</p>
+                        <p class="text-xs text-gray-300 opacity-0 group-hover:opacity-100 transition-opacity duration-300">${filme.tipo}</p>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function renderProgramacao() {
+            const container = document.getElementById('programacao-container');
+            // Alterado: Cores da borda e texto do menu de abas
+            let html = '<div class="flex justify-center space-x-2 md:space-x-4 mb-8 border-b-2 border-gray-200">';
+            Object.keys(programacao).forEach((dia, index) => {
+                html += `<button class="programacao-tab py-2 px-2 md:px-4 font-title text-lg md:text-xl tracking-wider transition-colors duration-300 ${index === 0 ? 'text-yellow-quebrada border-b-2 border-yellow-quebrada' : 'text-gray-400'}" data-dia="${dia}">${dia}</button>`;
+            });
+            html += '</div>';
+
+            html += '<div id="programacao-content">';
+            Object.keys(programacao).forEach((dia, index) => {
+                html += `<div class="programacao-dia space-y-4 ${index === 0 ? '' : 'hidden'}" data-dia-content="${dia}">`;
+                programacao[dia].forEach(item => {
+                    // Alterado: Cores dos cards de programação
+                    html += `
+                        <div class="grid grid-cols-4 gap-4 items-center bg-gray-50 p-4 rounded-lg border border-gray-200">
+                            <p class="col-span-1 text-yellow-quebrada font-bold">${item.hora}</p>
+                            <p class="col-span-2 text-gray-800">${item.evento}</p>
+                            <p class="col-span-1 text-right text-gray-500 text-sm">${item.local}</p>
+                        </div>
+                    `;
+                });
+                html += '</div>';
+            });
+            html += '</div>';
+            container.innerHTML = html;
+        }
+
+        function renderTextos() {
+            const grid = document.getElementById('textos-grid');
+            grid.innerHTML = textosCriticos.map(texto => `
+                <!-- Alterado: Cor de fundo, borda e texto dos cards -->
+                <a href="#" class="group block bg-white rounded-lg overflow-hidden border border-gray-200 hover:border-yellow-quebrada hover:shadow-xl transition-all duration-300">
+                    <div class="overflow-hidden">
+                        <img src="${texto.imagem}" alt="Imagem para o texto ${texto.titulo}" class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-yellow-quebrada">${texto.titulo}</h3>
+                        <p class="text-sm text-gray-500 mb-4">${texto.autor}</p>
+                        <p class="text-gray-600 leading-relaxed">${texto.resumo}</p>
+                    </div>
+                </a>
+            `).join('');
+        }
+
+        // --- INICIALIZAÇÃO E EVENT LISTENERS ---
+
+        document.addEventListener('DOMContentLoaded', () => {
+            renderFilmes();
+            renderProgramacao();
+            renderTextos();
+
+            // Mobile Menu Toggle
+            const mobileMenuButton = document.getElementById('mobile-menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+            
+            // Close mobile menu on link click
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // Programação Tabs
+            document.querySelectorAll('.programacao-tab').forEach(tab => {
+                tab.addEventListener('click', () => {
+                    const diaSelecionado = tab.dataset.dia;
+                    
+                    document.querySelectorAll('.programacao-tab').forEach(t => {
+                        t.classList.remove('text-yellow-quebrada', 'border-yellow-quebrada');
+                        t.classList.add('text-gray-400'); // Alterado para cor inativa mais clara
+                    });
+                    tab.classList.add('text-yellow-quebrada', 'border-yellow-quebrada');
+                    tab.classList.remove('text-gray-400');
+
+                    document.querySelectorAll('.programacao-dia').forEach(content => {
+                        if (content.dataset.diaContent === diaSelecionado) {
+                            content.classList.remove('hidden');
+                        } else {
+                            content.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // Header shrink on scroll
+            const header = document.getElementById('header');
+            window.onscroll = function() {
+                if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+                    header.classList.add('py-2');
+                    header.classList.remove('py-3');
+                } else {
+                    header.classList.add('py-3');
+                    header.classList.remove('py-2');
+                }
+            };
+        });
+    </script>
+</body>
+</html>
+
+
